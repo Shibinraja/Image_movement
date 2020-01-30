@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+	<head>
+	<title>Image</title>
+	<style>
+	
+	
+	#text{
+	margin-left:45%;
+	}
+	</style>
+	<script>
+			 
+			  	
+			  	
+			function moveleft(){
+				var key = document.getElementById("cute");
+				key.style.left = parseInt(key.style.left ) - 5 + 'px';
+				
+			}
+			
+			function moveright(){
+				var key = document.getElementById("cute");
+				key.style.left = parseInt(key.style.left) + 5 + 'px';
+			}
+			
+			function movetop() {
+				var key = document.getElementById("cute");
+				key.style.top = parseInt(key.style.top) - 5 + 'px';
+			}
+			
+			function movedown(){
+				var key = document.getElementById("cute");
+				key.style.top = parseInt(key.style.top) + 5 +'px';
+			}
+		
+			
+			
+			function movement(a){
+	
+			var keys = a.keycode;
+			switch(keys){
+				case 37:
+						moveleft();
+						break;
+						
+				case 39:
+						moveright();
+						break;
+						
+				case 38:
+						movetop();
+						break;
+						
+				case 40:
+						movedown();
+						break;
+						
+			}
+			console.log(a)
+		};
+			function ready()
+				{
+					window.addEventListener('keydown' , movement);
+		
+				}
+	</script>	
+	</head>
+	 
+	<body onload="ready()">
+		<h2 id="text">Anahita</h2>
+		
+		<img src="Anahita.jpg" id="cute" alt="baby" style="position:absolute;left:0;top:0;right:0;down:0;" height = "350px">
+		
+		
+	</body>
+</html>
+		
